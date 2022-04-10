@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Color flipper</title>
+        <style>
+            body {
+                text-align: center;
+            }
+
+            p {
+                font-weight: bold;
+            }
+
+            #navbar {
+                width: 100%;
+                background-color: white;
+            }
+
+            h1 {
+                margin: 0;
+                padding: 0;
+            }
+            #container {
+                height: 90%;
+                width: 100%;
+            }
+
+        </style>
+
+        <script>
+
+            function changer() {
+                var random = Math.floor(Math.random() * 256);
+                var random2 = Math.floor(Math.random() * 256);
+                var random3 = Math.floor(Math.random() * 256);
+                var red = random;
+                var blue = random2;
+                var green = random3;
+                document.body.style.backgroundColor = "rgb(" + red +", "+ blue +", "+ green +")";
+                document.getElementById("colors").innerHTML = red + ", " + blue + ", " + green;
+                document.getElementById("history").innerHTML += red + ", " + blue + ", " + green + " | ";
+            }
+
+
+        </script>
+
+
+
+    </head>
+    <body>
+        <div id="navbar">
+            <h1>Color flipper</h1>
+        </div>
+
+                <p>Background color: <span id="colors"></span> </p>
+                <p>History: <span id="history"></span></p>
+                <button onclick="changer()" href="#">Click me!</button>
+
+
+            
+
+
+
+
+
+
+
+
+    </body>
+</html>
